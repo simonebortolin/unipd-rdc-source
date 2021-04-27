@@ -6,7 +6,7 @@ Contiene codici sia relativamente alla parte di Reti che Multimedia,
 
 Il codice è ispirato da quello presentato a lezione, ovviamente contiene modifiche per aumentare la leggibilità e/o piccole migliorie non presentate a lezione.
 
-Il codice viene aggiornato in maniera asincrona da codice proveniente da repo privato.
+Il codice viene aggiornato in maniera asincrona da codice proveniente da repo privato, non verrà rilasciato nessun codice prima di eventuali Homework.
 
 [Appunti di Reti di Calcolatori 1](https://simonebortolin.it/notes/)
 
