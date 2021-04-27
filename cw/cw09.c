@@ -9,8 +9,7 @@
 int main()
 {
     struct sockaddr_in addr; // address
-    int ll; // local lenght of single reader
-    int l = 0; // total lenght of the message
+    int rl = 0; // total lenght of the message
     char request[BUF_SIZE], response[BUF_SIZE];
     int s = socket(AF_INET, SOCK_STREAM, 0); // socket
     char *rb = NULL; // response body
@@ -31,7 +30,7 @@ int main()
         return 1;
     }
 
-    sprintf(request, "GET /PIPPO \r\n");
+    sprintf(request, "GET / \r\n");
 
     if (write(s, request, strlen(request)) == -1) {
         perror("Write fail");
@@ -40,11 +39,11 @@ int main()
 
     // read the response
 
-    for(l = 0; (ll = read(s, response + l, BUF_SIZE - l - 1)) > 0; l += ll);
+    for(int j = 0; (j = read(s, response + rl, BUF_SIZE - rl - 1)) > 0; rl += j);
 
-    response[l] = 0;
+    response[rl] = 0;
     
     printf("%s", response);
 
-    printf("\nRead %d chars", l);
+    printf("\nRead %d chars", rl);
 }

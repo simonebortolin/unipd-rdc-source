@@ -22,7 +22,7 @@ int main()
     char * sl; // status line
     int cl; // content length
     int hl; // header length
-    int rl; // read length
+    int rl = 0; // read length
 
     if (s == -1) {
         perror("Socket fail");
@@ -38,7 +38,7 @@ int main()
         return 1;
     }
 
-    sprintf(request, "GET /pippo HTTP/1.0\r\n\r\n");
+    sprintf(request, "GET / HTTP/1.0\r\n\r\n");
 
     if (write(s, request, strlen(request)) == -1) {
         perror("Write fail");
@@ -82,7 +82,7 @@ int main()
 
     rb = (char *) malloc(cl + 1); // +1 is for the string cap
 
-    for (int j = 0; (j = read(s, rb + j, cl - j)) > 0; rl += j);
+    for (int j = 0; (j = read(s, rb + rl, cl - rl)) > 0; rl += j);
 
     rb[rl] = 0;
 
