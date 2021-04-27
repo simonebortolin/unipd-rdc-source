@@ -48,11 +48,11 @@ int main()
     sl = h[0].n = response;
 
     for (int j = 0; read(s, response + j, 1); j++) {
-        if ((response[j] == ':') && (h[hl].v == 0)) {
+        if ((response[j] == ':') && (h[hl].v == NULL)) {
             response[j] = 0;
             h[hl].v = response + j + 1;
         }
-        else if ((response[j] == ' ') && (h[hl].v = response + j)) {
+        else if ((response[j] == ' ') && (h[hl].v == response + j)) {
             ++h[hl].v;
         }
         else if ((response[j] == '\n') && (response[j - 1] == '\r')) {
