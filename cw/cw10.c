@@ -20,7 +20,7 @@ int main()
     header h[HEADER_SIZE]; // header
     char * rb = NULL; // response body
     char * sl; // status line
-    int cl; // contect length
+    int cl; // content length
     int hl; // header length
     int rl; // read length
 
