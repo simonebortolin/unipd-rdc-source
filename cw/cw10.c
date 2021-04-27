@@ -73,9 +73,9 @@ int main()
     }
 
     if (cl == -1) {
-        printf("Content-Length: %d\n", cl);
-
         cl = BUF_SIZE;
+    } else {
+        printf("Content-Length: %d\n", cl);
     }
 
     printf("Malloc-Size: %d\n", cl+1);
