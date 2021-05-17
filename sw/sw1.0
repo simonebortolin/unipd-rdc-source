@@ -89,7 +89,7 @@ int main() {
         for (i++; commandline[i] != ' '; i++);
         commandline[i] = 0;
         ver = commandline + i + 1;
-        for (i++; commandline[i] != '\r'; i++);
+        for (i++; commandline[i] != '\r' && commandline[i] != 0; i++);
         commandline[i] = 0;
         printf("method=%s path=%s ver=%s\n", method, path, ver);
 
