@@ -23,7 +23,7 @@ int main()
 {
     FILE *f;
     char command[100];
-    int i,s,t,s2,s3,n,len,c,yes=1,j,k,pid;
+    int i,s,t,u,s2,s3,n,len,c,yes=1,j,k,pid;
     s = socket(AF_INET, SOCK_STREAM, 0);
     if ( s == -1) { perror("Socket Fallita\n"); return 1;}
     local.sin_family=AF_INET;
@@ -44,6 +44,7 @@ int main()
         // else is the parent process and go to the beginning of the loop
         if (s2 == -1) {perror("Accept Fallita\n"); return 1;}
         do {
+            printf("\n\n\nsocket: %d\n",s2);
             bzero(h, sizeof(struct headers)*100);
             j=0;k=0;
             h[k].n = request;
@@ -120,7 +121,7 @@ int main()
                     exit(0);
                 }
                 else { //Parent
-                    while(t=read(s3,response2,2000)){
+                    while(u=read(s3,response2,2000)){
                         write(s2,response2,t);
                         //printf("CL <<<(%d)%s \n",t,host);
                     }
@@ -129,7 +130,7 @@ int main()
                     close(s3);
                 }
             }
-        } while (1);
+        } while (t >= 0);
         shutdown(s2,SHUT_RDWR);
         close(s2);
         exit(0);
