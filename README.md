@@ -8,6 +8,8 @@ Il codice è ispirato da quello presentato a lezione, ovviamente contiene modifi
 
 Il codice viene aggiornato in maniera asincrona da codice proveniente da repo privato, non verrà rilasciato nessun codice prima di eventuali Homework.
 
+[Esami ed esercizi](exam)
+
 [Appunti di Reti di Calcolatori 1](https://simonebortolin.it/notes/)
 
 Altro materiale utile è possibile visionarlo (attenzione, il programma è cambiato, la parte di livello basso viene trattata in un corso stand-alone):
