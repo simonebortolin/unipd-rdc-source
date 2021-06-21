@@ -33,5 +33,9 @@ P.S. se hai dubbi su questa affermazione e se pensi che sia una cosa trovata su 
 
 N.B: nelle implementazioni di server e proxy keep alive è **importante** farlo **multithread** in quanto la connessione è persistente e se non fosse **multithread** fino a chiusura della connessione nuove richieste sarebbero in attesa.
 
+P.S. se hai dubbi sull'affermazione del N.B. prova ad implementarlo senza thread e fai una richiesta da due browser diversi e poi vedi se funziona.
+
+
+
 
 
