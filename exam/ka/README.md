@@ -31,9 +31,20 @@ La somma dei vari chunk-size è la `Content-Length` della pagina. Nel caso in cu
 
 P.S. se hai dubbi su questa affermazione e se pensi che sia una cosa trovata su stackowerflow fatti questa domanda: *Come è possibile determinare quando finisce una richiesta e quando inizia quella successiva senza un delimitatore?*
 
-N.B: nelle implementazioni di server e proxy keep alive è **importante** farlo **multithread** in quanto la connessione è persistente e se non fosse **multithread** fino a chiusura della connessione nuove richieste sarebbero in attesa.
+## Server Keep Alive
 
-P.S. se hai dubbi sull'affermazione del N.B. prova ad implementarlo senza thread e fai una richiesta da due browser diversi e poi vedi se funziona.
+Nelle implementazioni di server e proxy keep alive è **importante** farlo **multithread** in quanto la connessione è persistente e se non fosse **multithread** fino a chiusura della connessione nuove richieste sarebbero in attesa.
+
+P.S. se hai dubbi sull'affermazione precedente prova ad implementarlo senza thread e fai una richiesta da due browser diversi e poi vedi se funziona.
+
+L'implementazione corretta di un Server KA chiude il thread appena non è più possibile leggere/scrivere sul socket. Se pensi che la suddetta implementazione non funziona o che è errata, pensaci due volte e ricordati che è il client che deve fare richieste Keep Alive al Server, e se il client non fa richieste KA il server non le può Unire.
+
+
+## Proxy Keep Alive
+
+Il proxy keep alive con connessione Client-Proxy KA ha semplicemente un ciclo do-while che termina quando il socket è stato chiuso e non è più possibile leggere/scrivere sul socket. 
+
+Se pensi che la suddetta implementazione non funziona o che è errata, pensaci due volte e ricordati che è il client che deve fare richieste Keep Alive al Proxy, e se il client non fa richieste KA il proxy non le può Unire.
 
 
 
