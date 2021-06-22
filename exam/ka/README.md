@@ -29,7 +29,7 @@ chunks.
 
 La somma dei vari chunk-size è la `Content-Length` della pagina. Nel caso in cui la fine di un file viene determinata dalla chiusura del socket, tipico di HTTP/1.0 e 0.9 non è possibile in nessun modo fare richieste multiple, questo vare anche nel caso di inoltro di richieste, come nei Proxy, in quanto la connessione viene brutalmente chiusa.
 
-P.S. se hai dubbi su questa affermazione e se pensi che sia una cosa trovata su stackowerflow fatti questa domanda: *Come è possibile determinare quando finisce una richiesta e quando inizia quella successiva senza un delimitatore?*
+P.S. se hai dubbi su questa affermazione poniti questa domanda: *Come è possibile determinare quando finisce una richiesta e quando inizia quella successiva senza un delimitatore?* la risposta più logica è quella giusta.
 
 ## Server Keep Alive
 
