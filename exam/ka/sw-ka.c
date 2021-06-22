@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <errno.h>
-#include <sys/types.h>      /* See NOTES */
+#include <sys/types.h>          /* See NOTES */
 #include <sys/socket.h>
 #include <stdio.h>
 #include <string.h>
@@ -17,7 +17,7 @@ struct header{
 int main()
 {
     struct sockaddr_in addr,remote_addr;
-    int i,j,k,s,t,s2,len;
+    int i,j,k,s,t,s2,len, ka;
     char command[100];
     int c;
     FILE * fin;
@@ -40,6 +40,8 @@ int main()
     while(1){
         s2 =  accept(s, (struct sockaddr *)&remote_addr,&len);
 
+        printf("\n\nOpen socket: %d\n\n", s2);
+
         if(fork()) continue; // create a new thread for each connection
         // if fork return 0 is the child process and process to the following code
         // else is the parent process and go to the beginning of the loop
@@ -48,7 +50,7 @@ int main()
             if ( s2 == -1 ) { perror("Accept Fallita"); return 1;}
             bzero(h,100*sizeof(struct header *));
             commandline = h[0].n=request;
-            for( j=0,k=0; t= read(s2,request+j,1);j++){
+            for( j=0,k=0; t=read(s2,request+j,1);j++){
                 if(request[j]==':' && (h[k].v==0) ){
                     request[j]=0;
                     h[k].v=request+j+1;
@@ -61,8 +63,13 @@ int main()
             }
             if(t< 0) break;
             printf("Command line = %s\n",commandline);
+            ka = 1;
             for(i=1;i<k;i++){
                 printf("%s ----> %s\n",h[i].n, h[i].v);
+                if(strcmp(h[i].n, "Connection") == 0) {
+                    ka = !strcmp(h[i].v, " Keep-Alive");
+                }
+
             }
             method = commandline;
             for(i=0;commandline[i]!=' ';i++){} commandline[i]=0; path = commandline+i+1;
@@ -79,7 +86,7 @@ int main()
                     strcpy(path+1,"tmpfile.txt");
             }
             if ((fin = fopen(path+1,"rt"))==NULL){
-                sprintf(response,"HTTP/1.1 404 Not Found\r\n\r\n");
+                sprintf(response,"HTTP/1.1 404 Not Found\r\nContent-Length: 0\r\n");
                 write(s2,response,strlen(response));
             }
             else {
@@ -96,7 +103,8 @@ int main()
                      write(s2,&c,1);
                 fclose(fin);
             }
-        } while(1);
+        } while(recv(s2, NULL, 1, MSG_PEEK | MSG_DONTWAIT) != 0);
+        printf("\n\nClose socket: %d\n\n", s2);
         close(s2);
     }
 }
