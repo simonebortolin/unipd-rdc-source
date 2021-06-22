@@ -52,7 +52,7 @@ Il keep alive non è standard in HTTP/1.0 e non è detto che un server in HTTP/1
 
 In HTTP/1.1 la connessione Keep-Alive è di default, e non è necessario specificare nessun Header. Però è necessario inviare i dati con una `Content-Length` valida o con `Transfer-Encoding: chunked`.
 
-Normalmene in HTTPS è necessario specificare alla connessione di condividere l'host validation e alcuni dettagli della connession crittografata. HTTP/2.0 consente connessioni keep alive in maneira senza ordinamento, nel senso che si possono inviare più richieste senza attendere la risposta. E c'è anche il push predittivo nel senso che possono essere inviate risorse non richieste.
+Normalmene in HTTPS è necessario specificare alla connessione di condividere l'host validation e alcuni dettagli della connession crittografata. HTTP/2.0 consente connessioni keep alive in maneira senza ordinamento, nel senso che si possono inviare più richieste senza attendere la risposta (a differenza di HTTP/1.1 e 1.0 dove il comportamento non è definito). E c'è anche il push predittivo nel senso che possono essere inviate risorse non richieste.
 
 
 
