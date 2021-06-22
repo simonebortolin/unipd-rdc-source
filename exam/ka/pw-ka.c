@@ -48,7 +48,7 @@ int main()
             bzero(h, sizeof(struct headers)*100);
             j=0;k=0;
             h[k].n = request;
-            while(read(s2,request+j,1)){
+            while(t = read(s2,request+j,1)){
                 if((request[j]=='\n') && (request[j-1]=='\r')){
                     request[j-1]=0;
                     if(h[k].n[0]==0) break;
@@ -60,6 +60,7 @@ int main()
                 }
                 j++;
             }
+            if(t< 0) break;
             printf("%s",request);
             method = request;
             for(i=0;(i<2000) && (request[i]!=' ');i++); request[i]=0;
@@ -130,7 +131,7 @@ int main()
                     close(s3);
                 }
             }
-        } while (t >= 0);
+        } while (1);
         shutdown(s2,SHUT_RDWR);
         close(s2);
         exit(0);
