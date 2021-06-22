@@ -4,7 +4,7 @@
 - [BlackList](bl)
 - [Chache](cache)
 - [Content Length](cl)
-- [Chuncked](ck)
+- [Chunked](ck)
 - [Cookies](cookies)
 - [Delay](delay)
 - [Keep Alive](ka)
