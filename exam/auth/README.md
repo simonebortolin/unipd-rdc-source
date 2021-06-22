@@ -6,7 +6,7 @@ L'implementazione HTTP Basic authentication (BA)  utilizza headers HTTP statici 
 
 ![Schermata di Login del browser per HTTP BA](auth-login.png "Schermata di Login del browser per HTTP BA")
 
-Il client inviare al browser una stringa nel formato `password:username` codificato in base64, nel caso di un username uguale a `apriti` e una password uguale a `sesamo`, il relativo base64 è `YXByaXRpOnNlc2Ftbw==` e il relativo header è `Authorization: Basic YXByaXRpOnNlc2Ftbw==`.
+Il client inviare al browser una stringa nel formato `username:password` codificato in base64, nel caso di un username uguale a `apriti` e una password uguale a `sesamo`, il relativo base64 è `YXByaXRpOnNlc2Ftbw==` e il relativo header è `Authorization: Basic YXByaXRpOnNlc2Ftbw==`.
 
 L'header BA deve essere inviato in ogni richiesta HTTP, il browser deve inserire nella cache le credenziali per un periodo di tempo congruo per evitare di dover richiedere ogni volta all'utente la username e la password. HTTP non fornisce un metodo al web server per indicare al browser di eseguire il logout, ci sono una serie di possibilità utilizzando specifiche caratteristiche nei differenti browser, ma le implementazioni cambiano da browser a browser.
 
