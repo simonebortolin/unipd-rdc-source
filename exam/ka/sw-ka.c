@@ -96,7 +96,7 @@ int main()
                     t = write(s2,&c,1);
                 fclose(fin);
             }
-        } while(t > 0);
+        } while(1);
         close(s2);
     }
 }
