@@ -48,7 +48,7 @@ int main()
             if ( s2 == -1 ) { perror("Accept Fallita"); return 1;}
             bzero(h,100*sizeof(struct header *));
             commandline = h[0].n=request;
-            for( j=0,k=0; read(s2,request+j,1);j++){
+            for( j=0,k=0; t= read(s2,request+j,1);j++){
                 if(request[j]==':' && (h[k].v==0) ){
                     request[j]=0;
                     h[k].v=request+j+1;
@@ -59,6 +59,7 @@ int main()
                     h[++k].n=request+j+1;
                 }
             }
+            if(t< 0) break;
             printf("Command line = %s\n",commandline);
             for(i=1;i<k;i++){
                 printf("%s ----> %s\n",h[i].n, h[i].v);
