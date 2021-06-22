@@ -55,5 +55,9 @@ In HTTP/1.1 la connessione Keep-Alive è di default, e non è necessario specifi
 Normalmene in HTTPS è necessario specificare alla connessione di condividere l'host validation e alcuni dettagli della connession crittografata. HTTP/2.0 consente connessioni keep alive in maneira senza ordinamento, nel senso che si possono inviare più richieste senza attendere la risposta (a differenza di HTTP/1.1 e 1.0 dove il comportamento non è definito) e  le risposte possono arrivare in maniera non ordinata. E c'è anche il push predittivo nel senso che possono essere inviate risorse non richieste.
 
 
+## Come si implementa in C?
 
+Le API socket C non permettono di ascoltare se c'è un eventuale FIN a livello. Il metodo più banale è verificare se la write o la read non vanno a buon fine (ritornano `-1`) e quindi si presume che il client si sia disconnesso. Questo metodo non sembra dare buoni risultati anche se concettualmente giusto
+
+L'alternativa è quindi controllare questa condizione: `recv(s2, NULL, 1, MSG_PEEK | MSG_DONTWAIT) != 0` e che non ci sia l'header `Connection: close`.
 
