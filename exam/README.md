@@ -8,6 +8,7 @@
 - [Cookies](cookies)
 - [Delay](delay)
 - [Keep Alive](ka)
+- [Range](range)
 - [Reflect](reflect)
 - [Trace](trace)
 - [Param](param)
