@@ -46,6 +46,13 @@ Il proxy keep alive con connessione Client-Proxy KA ha semplicemente un ciclo do
 
 Se pensi che la suddetta implementazione non funziona o che è errata, pensaci due volte e ricordati che è il client che deve fare richieste Keep Alive al Proxy, e se il client non fa richieste KA il proxy non le può Unire.
 
+## HTTP/1.0, HTTP/1.1, HTTP/2.0 e HTTPS
+
+Il keep alive non è standard in HTTP/1.0 e non è detto che un server in HTTP/1.0 accetti una connessione Keep-Alive, soprattutto se non può determinare il `Content-Lenght` a priori. In ogni caso è necessario specificare l'header `Connection: Keep-Alive`.
+
+In HTTP/1.1 la connessione Keep-Alive è di default, e non è necessario specificare nessun Header. Però è necessario inviare i dati con una `Content-Length` valida o con `Transfer-Encoding: chunked`.
+
+Normalmene in HTTPS è necessario specificare alla connessione di condividere l'host validation e alcuni dettagli della connession crittografata. HTTP/2.0 consente connessioni keep alive in maneira senza ordinamento, nel senso che si possono inviare più richieste senza attendere la risposta. E c'è anche il push predittivo nel senso che possono essere inviate risorse non richieste.
 
 
 
