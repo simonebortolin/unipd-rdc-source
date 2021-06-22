@@ -15,7 +15,7 @@ in particolare nelle sezioni 14.35 e 14.16 e 3.12.
 Scrivere (come /* commento */ all'inizio del file esame.c) una breve relazione su
           
 1. Funzionalità puntuali da aggiungere
-2. Punti di intervento neĺ programma
+2. Punti di intervento nel programma
 3. Eventuali scelte implementative
 4. Descrizione dell'esperimento e della stampa (printf) di dati di controllo
 5. Descrizione dell'esito e verifica correttezza.
