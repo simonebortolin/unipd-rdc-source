@@ -57,7 +57,6 @@ Normalmene in HTTPS è necessario specificare alla connessione di condividere l'
 
 ## Come si implementa in C?
 
-Le API socket C non permettono di ascoltare se c'è un eventuale FIN a livello. Il metodo più banale è verificare se la write o la read non vanno a buon fine (ritornano `-1`) e quindi si presume che il client si sia disconnesso. Questo metodo non sembra dare buoni risultati anche se concettualmente giusto
-
-L'alternativa è quindi controllare questa condizione: `recv(s2, NULL, 1, MSG_PEEK | MSG_DONTWAIT) != 0` e che non ci sia l'header `Connection: close`.
+Le API socket C non permettono di ascoltare se c'è un eventuale FIN a livello. Il metodo più banale è verificare se la write o la read non vanno a buon fine (ritornano `-1`) e quindi si presume che il client si sia disconnesso, questa modalità è usata in [pw-ka.c](pw-ka.c)
+L'alternativa è quindi controllare questa condizione: `recv(s2, NULL, 1, MSG_PEEK | MSG_DONTWAIT) != 0` e che non ci sia l'header `Connection: close`, questa alternativa è stata usata in [sw-ka.c](sw-ka.c)
 
