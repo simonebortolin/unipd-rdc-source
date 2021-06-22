@@ -93,7 +93,7 @@ int main()
                 write(s2,response,strlen(response));
 
                 while ( (c = fgetc(fin)) != EOF )
-                    t = write(s2,&c,1);
+                     write(s2,&c,1);
                 fclose(fin);
             }
         } while(1);
