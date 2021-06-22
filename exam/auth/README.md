@@ -10,6 +10,6 @@ Il client inviare al browser una stringa nel formato `password:username` codific
 
 L'header BA deve essere inviato in ogni richiesta HTTP, il browser deve inserire nella cache le credenziali per un periodo di tempo congruo per evitare di dover richiedere ogni volta all'utente la username e la password. HTTP non fornisce un metodo al web server per indicare al browser di eseguire il logout, ci sono una serie di possibilità utilizzando specifiche caratteristiche nei differenti browser, ma le implementazioni cambiano da browser a browser.
 
-L'header BA trova ancora ampio uso nei proxy, per esempio il proxy fornito dall'università di Padova [https://bibliotecadigitale.cab.unipd.it/bd/auth-proxy](Auth Proxy UNIPD) usa una autenticazione HTTP.
+L'header BA trova ancora ampio uso nei proxy, per esempio il proxy fornito dall'università di Padova [Auth Proxy UNIPD](https://bibliotecadigitale.cab.unipd.it/bd/auth-proxy) usa una autenticazione HTTP.
 
 L'autenticazione BA non prevede protezione per le credenziali trasmesse. Esse vengono banalmente codificate con base64 ma non criptate o crittografate con hash (N.B. se il canale è sicuro è sconsigliato l'uso di hash lato browser in quanto il server non ha modo di fare ulteriori verifiche è l'evenutale salt è pubblico sul codice JavaScript), il problema si risolve in HTTPS in quanto pure gli header sono crittografati.
