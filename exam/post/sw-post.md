@@ -2,6 +2,7 @@ Si modifichi il programma web server esame.c in modo tale che supporti una tipol
 
 Il client dovrà accedere tramite il programma web server alla risorsa http://88.80.187.84:<port>/post.html contenente il seguente sorgente html, già disponibile nella home di ciascuno.
 
+```
 <html>
 <form action="/cgi-bin/command" method="post" enctype="x-www-form-urlencoded">
   <p>Comando <input type="text" id="mycom" name="commando" >
@@ -10,7 +11,8 @@ Il client dovrà accedere tramite il programma web server alla risorsa http://88
   <p> <input type="submit">
 </form>
 </html>
-
+```
+  
 che corrisponde alla pagina Web visualizzata in figura.
   
 ![](image3.png)
