@@ -1,3 +1,5 @@
+Esame di Reti di Calcolatori - 24 Giugno 2021
+
 Si modifichi il programma web server esame.c in modo tale che supporti una tipologia di web application gateway (cgi) differente da quella finora supportata. 
 
 Il client dovrà accedere tramite il programma web server alla risorsa http://88.80.187.84:<port>/post.html contenente il seguente sorgente html, già disponibile nella home di ciascuno.
