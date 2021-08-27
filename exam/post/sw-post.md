@@ -15,7 +15,7 @@ Il client dovrà accedere tramite il programma web server alla risorsa http://88
   
 che corrisponde alla pagina Web visualizzata in figura.
   
-![](image3.png)
+![](source/image3.png)
   
   
 La pagina consentirà all’utente, per tramite dell’User Agent (browser), di inserire il nome di un comando di shell UNIX da eseguire (per esempio ls) e uno o due parametri (per esempio -l).  
