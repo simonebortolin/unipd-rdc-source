@@ -7,16 +7,7 @@ Si modifichi il programma del web proxy riportato nel file esame.c presente nell
 
 Al fine di implementare la funzione, si faccia riferimento all’header Range dell’HTTP/1.1 definito nella RFC 2616: sezioni 14.35, 3.12, 14.16 .
 
-Scrivere (come /* commento */ all'inizio del file esame.c) una breve relazione su
-1.	Funzionalità puntuali da aggiungere
-2.	Punti di intervento neĺ programma
-3.	Eventuali scelte implementative 
-4.	Descrizione dell’esecuzione e verifica correttezza.
-oppure
-1.	/*RITIRATO*/, nel caso in cui si decida di ritirarsi
-
 
 Per la sperimentazione collegarsi con il web client (configurato per utilizzare il proxy modificato) all’URL  http://88.80.187.84/image.jpg 
 
-Utilizzare come PORT del proxy, lato client, il numero 2xyzw dove xyzw sono le ultime 4 cifre del numero di matricola.
 
