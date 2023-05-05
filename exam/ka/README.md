@@ -2,7 +2,7 @@
 
 Il Keep Alive fa un modo che in una unica connessione il socket rimane in vita e permette di inviare più pagine, sullo stesso socket senza dover rinegoziare una connessione, in Keep alive ci sono meno aperture di socket e una unica connessione che viene usata per scaricare più elementi senza dover riconnetersi
 
-![Connessioni Multiple e Keep Alive](keep-alive.png "Connessioni Multiple e Keep Alive")
+![Connessioni Multiple e Keep Alive](source/keep-alive.png "Connessioni Multiple e Keep Alive")
 
 Affinché sia possibile avere una connessione Keep Alive o Persistente  è necessario che il server utilizzi un sistema per determinare la fine di una richiesta e l'inizio della successiva diversa dalla chiusura della connessione. Le principali strategie sono
 * `Content-Length`: nel caso di file generati dinamicamente richiede un aver generato tutta la pagina prima di poterla inviare, richiede una dimensione del buffer molto elevata
@@ -53,6 +53,9 @@ Il keep alive non è standard in HTTP/1.0 e non è detto che un server in HTTP/1
 In HTTP/1.1 la connessione Keep-Alive è di default, e non è necessario specificare nessun Header. Però è necessario inviare i dati con una `Content-Length` valida o con `Transfer-Encoding: chunked`.
 
 Normalmene in HTTPS è necessario specificare alla connessione di condividere l'host validation e alcuni dettagli della connession crittografata. HTTP/2.0 consente connessioni keep alive in maneira senza ordinamento, nel senso che si possono inviare più richieste senza attendere la risposta (a differenza di HTTP/1.1 e 1.0 dove il comportamento non è definito) e  le risposte possono arrivare in maniera non ordinata. E c'è anche il push predittivo nel senso che possono essere inviate risorse non richieste.
+
+> Connection-specific header fields such as Connection and Keep-Alive are prohibited in HTTP/2
+> Chrome and Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2 spec requirements and won't load any response which contains them.
 
 
 ## Come si implementa in C?

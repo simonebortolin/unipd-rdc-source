@@ -20,6 +20,6 @@ Scrivere (come /* commento */ all'inizio del file esame.c) una breve relazione s
 4. Descrizione dell'esperimento e della stampa (printf) di dati di controllo
 5. Descrizione dell'esito e verifica correttezza.
           
-Per la sperimentazione collegarsi con il web client all’URL http://88.80.187.84:80/image.jpg
+Per la sperimentazione collegarsi con il web client all’URL http://88.80.187.84:80/image.jpg (in alternativa usare https://i.imgur.com/z4d4kWk.jpg)
 
 NB: Negli esperimenti non occorre simulare la perdita di connessione.

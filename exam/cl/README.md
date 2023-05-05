@@ -1,0 +1,5 @@
+L'header HTTP "Content-Length" indica la dimensione, in byte, dell'entità del corpo del messaggio HTTP (ad esempio, il numero di byte del corpo della risposta HTTP). Il suo valore è un intero non negativo. L'utilizzo di questo campo è obbligatorio per le risposte HTTP/1.1, a meno che non si utilizzi la codifica di trasferimento "chunked" per il corpo del messaggio.
+
+In HTTP/1.0 è obbligatorio se c'è l'uso del keep-alive, altrimenti il file termina con la chiusura della connessione.
+
+L'utilizzo del campo Content-Length consente al client di sapere esattamente quanti byte deve leggere per recuperare l'intero corpo della risposta. Inoltre, il server può utilizzare il campo per evitare di inviare il corpo del messaggio se la richiesta viene interrotta o se viene rilevato un errore nella richiesta.

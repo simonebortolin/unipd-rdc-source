@@ -1,0 +1,3 @@
+"Blacklist" è un termine utilizzato per indicare una lista di parole, frasi, indirizzi IP o URL che sono considerati "non autorizzati" o "non sicuri". Una blacklist HTTP è quindi una lista di indirizzi web che sono considerati pericolosi o inappropriati per l'accesso tramite il protocollo HTTP.
+
+Le blacklist HTTP sono utilizzate principalmente dai filtri web, che possono essere impostati a livello di rete o di dispositivo, per impedire l'accesso a siti web dannosi o non desiderati. Questi filtri possono essere utilizzati per proteggere i bambini dal contenuto inappropriato, impedire l'accesso a siti web di phishing o malware, o limitare l'accesso a siti web di gioco d'azzardo, pornografia o social network.

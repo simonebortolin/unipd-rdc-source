@@ -24,3 +24,6 @@ La pagina consentirà all’utente, per tramite dell’User Agent (browser), di 
 Alla pressione del bottone “Invia”, il browser invierà al Web server una  HTTP-request della risorsa /cgi-bin/command con il metodo POST contenente nel suo Entity Body il nome del comando e i due parametri secondo il medesimo formato (detto urlencoded) utilizzato nelle query string degli URL (v. RFC 1866 Cap. 8.2).
 Il Web Server ricevendo la richiesta alla risorsa /cgi-bin/command dovrà eseguire il comando specificato con i parametri e riportare l’output di quel comando come Entity Body della HTTP-response.
 
+--
+
+Note aggiuntive: La parte di Message Body è trattata nella RFC 2616 Cap. 4, prestare attenzione ad eventuali codifiche ed escape di caratteri speciali e prestare attenzione alla RFC 2616 Cap. 4.4 relativamente al message length (non è necessario implementare il Transfer-Encoding per il Message Body).

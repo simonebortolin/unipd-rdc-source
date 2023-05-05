@@ -8,6 +8,6 @@ Si modifichi il programma del web proxy riportato nel file esame.c presente nell
 Al fine di implementare la funzione, si faccia riferimento all’header Range dell’HTTP/1.1 definito nella RFC 2616: sezioni 14.35, 3.12, 14.16 .
 
 
-Per la sperimentazione collegarsi con il web client (configurato per utilizzare il proxy modificato) all’URL  http://88.80.187.84/image.jpg 
+Per la sperimentazione collegarsi con il web client (configurato per utilizzare il proxy modificato) all’URL  http://88.80.187.84/image.jpg  (in alternativa usare https://i.imgur.com/z4d4kWk.jpg)
 
 

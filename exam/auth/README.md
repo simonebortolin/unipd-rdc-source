@@ -1,10 +1,10 @@
 La **basic authentication** è un metodo fornito dal protocollo HTTP per fornire credenziali di accesso tra client e server. La suddetta implementazione, a differenza delle implementazioni comuni non richiede cookie, id di sessione e pagine di login ed **è gestita dal server web** e non da uno script (PHP, Java, ...) che a sua volta viene richiamato dal server web.
 
-![Funzionamento di un HTTP BA](auth.png "HTTP BA")
+![Funzionamento di un HTTP BA](source/auth.png "HTTP BA")
 
 L'implementazione HTTP Basic authentication (BA)  utilizza headers HTTP statici e standard che non richiedono handshake eseguito preventivamente, il funzionamento è molto semplice: il client richiede una pagina web al server e solo nel caso venga richiesta l'autenticazione il server risponde `401 Unauthorized` con l'header `WWW-Authenticate: Basic realm="realm"` dove il realm è il titolo che appare nel popup del browser, il client chiede all'utente username e password e li invia al server. Se il browser sa già l'username e la password essa viene inviata già alla prima richiesta.
 
-![Schermata di Login del browser per HTTP BA](auth-login.png "Schermata di Login del browser per HTTP BA")
+![Schermata di Login del browser per HTTP BA](source/auth-login.png "Schermata di Login del browser per HTTP BA")
 
 Il client inviare al browser una stringa nel formato `username:password` codificato in base64, nel caso di un username uguale a `apriti` e una password uguale a `sesamo`, il relativo base64 è `YXByaXRpOnNlc2Ftbw==` e il relativo header è `Authorization: Basic YXByaXRpOnNlc2Ftbw==`.
 
