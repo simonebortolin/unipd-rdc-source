@@ -1,5 +1,4 @@
-Università degli Studi di Padova - Dipartimento di Ingegneria Informatica
-Esame di Reti di Calcolatori - 30 Agosto 2018
+# Esame di Reti di Calcolatori - 30 Agosto 2018
 
 Si modifichi il programma web client wc18.c in modo tale che sia in grado di gestire il meccanismo di controllo
 del caching basato sugli header `Last-Modified` e `If-Modified-Since` descritti nella RFC 2616 ai capitoli 14.29,

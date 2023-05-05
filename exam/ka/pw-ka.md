@@ -1,4 +1,4 @@
-Esame di Reti di Calcolatori - 21 Giugno 2017
+# Esame di Reti di Calcolatori - 21 Giugno 2017
 
 Si modifichi il programma proxy in modo che preveda due differenti modalità di gestione della connessione, una dal lato client e una dal lato server.
 Da un lato la connessione sarà gestita in modalità keep-alive mentre dall'altro sarà gestita in modalità close.

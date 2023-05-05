@@ -1,0 +1,1 @@
+L'header `Accept"` in una richiesta HTTP viene utilizzato per indicare il tipo di MIME type che il client è disposto ad accettare nella risposta. Il valore dell'header `Accept` è di solito una lista di tipi di media, con parametri opzionali che indicano il fattore di qualità (cioè la preferenza relativa) per ciascun tipo.

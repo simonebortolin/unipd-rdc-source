@@ -1,4 +1,4 @@
-Esame di Reti di Calcolatori - 12 Luglio 2018
+# Esame di Reti di Calcolatori - 12 Luglio 2018
 
 Si modifichi il programma ws18.c in modo tale che sia in grado di gestire più richieste HTTP/1.1 all’interno della
 medesima connessione TCP senza l’uso di chunk.

@@ -1,4 +1,4 @@
-Esercizio di Reti di Calcolatori 
+# Esercizio di Reti di Calcolatori 
 
 Si modifichi il server client sviluppato durante il corso per renderlo in grado di scaricare file di grandi dimensioni in
 presenza di connettività di rete non affidabile caratterizzata da una frequente interruzione delle connessioni.

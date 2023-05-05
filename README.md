@@ -15,4 +15,5 @@ Il codice viene aggiornato in maniera asincrona da codice proveniente da repo pr
 Altro materiale utile è possibile visionarlo (attenzione, il programma è cambiato, la parte di livello basso viene trattata in un corso stand-alone):
 - [Codice Reti di Calcolatori A.A. 2018/2019](https://github.com/nicomazz/ComputerNetworks-unipd2018)
 - [Appunti di Reti di Calcolatori A.A. 2018/2019](https://www.stefanoivancich.com/?p=1291)
-
+- [Reti di Calcolatori](https://github.com/cfranc0/unipd-rdc)
+- [rdc-2021](https://github.com/mssdvd/rdc-2021)

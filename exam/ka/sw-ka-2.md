@@ -1,4 +1,4 @@
-Esame di Reti di Calcolatori - 1 Luglio 2022
+# Esame di Reti di Calcolatori - 1 Luglio 2022
 
 La pagina HTML prova.html che trovate nella vostra /home/<matricola> richiama diversi file
 di immagini (1.png, 2.png,…,9.png) anch’essi presenti nella “home”. Il client, interpretando il

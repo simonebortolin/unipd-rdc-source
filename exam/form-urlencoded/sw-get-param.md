@@ -1,4 +1,4 @@
-Esercizio di Reti di Calcolatori
+# Esercizio di Reti di Calcolatori
 
 Modificare sw.c affiche possa ricevere passare parametri attraverso la codifica detta www-form-urlencoded nelle query string degli URL (v. RFC 1866 Cap. 8.2).
 

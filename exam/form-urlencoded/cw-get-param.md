@@ -1,4 +1,4 @@
-Esercizio di Reti di Calcolatori
+# Esercizio di Reti di Calcolatori
 
 Modificare cw.c affiche si possano passare parametri attraverso la codifica detta www-form-urlencoded nelle query string degli URL (v. RFC 1866 Cap. 8.2).
 

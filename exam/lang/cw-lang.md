@@ -1,4 +1,4 @@
-Esercizio di Reti di Calcolatori
+# Esercizio di Reti di Calcolatori
 
 Il sito web https://stem.elearning.unipd.it/ supporta l'utilizzo dell'header `Accept-Language` per selezionare la lingua se italiano o inglese. Dato che il sito web, non supporta HTTP ma solo HTTPS si modifichi il file [cw-ssl.c](../ssl-tls/cw-ssl.c) affinché supporti l'invio dell'header `Accept-Language`. Controllare che l'header di risposta sia corretto  `Content-Language`.
 

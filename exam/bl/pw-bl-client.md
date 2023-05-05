@@ -1,4 +1,4 @@
-PROVA DI ESAME DI RETI DI CALCOLATORI - 20 Giugno 2016
+# PROVA DI ESAME DI RETI DI CALCOLATORI - 20 Giugno 2016
 	
 
 Si modifichi il programma wp16.c in modo tale che:
