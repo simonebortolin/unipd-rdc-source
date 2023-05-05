@@ -13,7 +13,7 @@
 |     [Form-urlencoded](form-urlencoded)            |     Client,   Server           |     Get, Post    |
 |     [Head](head)                                  |     Client,   Server           |     Head         |
 |     [Keep Alive](ka)                              |     Client,   Server, Proxy    |     Get          |
-|     [Language](lang)                              |     Client,   Server           |     Get          |
+|     [Language](lang)                              |     Client,   Server, Proxy    |     Get          |
 |     [Multipart](multipart)                        |     Client,   Server           |     Post         |
 |     [Range](range)                                |     Client,   Server, Proxy    |     Get          |
 |     [Reflect](reflect)                            |     Client                     |     Get          |
