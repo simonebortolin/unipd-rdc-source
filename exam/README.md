@@ -1,6 +1,6 @@
 # Esami ed esercizi di reti di calcolatori
 
-- [Authenticate and Authorization](auth)
+- [Authentication and Authorization](auth)
 - [BlackList](bl)
 - [Chache](cache)
 - [Content Length](cl)
