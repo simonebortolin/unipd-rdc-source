@@ -47,3 +47,5 @@ SSL_shutdown(ssl);
 SSL_free(ssl);
 SSL_CTX_free(ctx);
 ```
+
+N.B. per compilare è necessario usare `gcc cw_ssl.c -lssl -lcrypto -o cw_ssl`
