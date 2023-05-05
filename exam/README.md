@@ -16,7 +16,7 @@
 |     [Language](lang)                              |     Client,   Server, Proxy    |     Get          |
 |     [Multipart](multipart)                        |     Client,   Server           |     Post         |
 |     [Range](range)                                |     Client,   Server, Proxy    |     Get          |
-|     [Reflect](reflect)                            |     Client                     |     Get          |
+|     [Reflect](reflect)                            |     Server                     |     Get          |
 |     [SSL/TLS](ssl-tls)                            |     Client                     |     Get          |
 |     [Trace](trace)                                |     Client                     |     Trace        |
 
