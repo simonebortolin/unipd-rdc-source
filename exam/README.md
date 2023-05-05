@@ -15,7 +15,6 @@
 - [Reflect](reflect)
 - [SSL/TLS](ssl)
 - [Trace](trace)
-- [Param](param)
 
 # Metodi HTTP
 
